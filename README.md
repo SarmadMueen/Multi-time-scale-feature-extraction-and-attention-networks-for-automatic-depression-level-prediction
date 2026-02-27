@@ -20,7 +20,7 @@ Official source code of the paper: **"Multi-time scale feature extraction and at
 
 ---
 
-## 📝 Abstract
+# Abstract
 
 Depression impairs functioning across personal and professional domains, and early detection is essential for
 timely intervention. Existing clinical assessments rely on specialists, limiting accessibility and scalability. This
@@ -40,6 +40,7 @@ that dilated operations outperform fixed-scale or squeeze-and-excitation alterna
 state-of-the-art performance at substantially lower computational cost, enabling practical, full-video depression
 assessment on standard frame-rates. The method is robust to short occlusions through median aggregation and
 may support scalable screening in clinical and community settings.
+
 ---
 
 ## ⚙️ Installation
