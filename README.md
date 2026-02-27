@@ -11,7 +11,6 @@ Official source code of the paper: **"Multi-time scale feature extraction and at
 
 [Sarmad Al-Gawwam](https://scholar.google.com/), [Aleksandr Zaitcev](https://scholar.google.com/), [Mohammad R. Eissa](https://scholar.google.com/), [Noor Alshwilli](https://scholar.google.com/), [Mohammed Benaissa](https://scholar.google.com/)
 
-*Department of Electronic and Electrical Engineering, University of Sheffield, Sheffield, S1 3JD, UK*
 
 <br>
 <img src="/model_page-0001.jpg" alt="MSFE-CTA Architecture" width="800">
@@ -23,12 +22,24 @@ Official source code of the paper: **"Multi-time scale feature extraction and at
 
 ## 📝 Abstract
 
-Depression impairs functioning across personal and professional domains, and early detection is essential for timely intervention. Existing clinical assessments rely on specialists, limiting accessibility and scalability. This paper proposes an automated, video-based approach that estimates depression severity directly from full-length interviews. Facial markers evolve over micro- to macro- timescales; therefore, focusing solely on short clips risks missing long-range cues. 
-
-This repository introduces the **Multi-Timescale Feature Extraction and Channel-Temporal Attention network (MSFE-CTA)** that learns dependencies across milliseconds, seconds, and minutes from complete recordings. The MSFE module employs stacks of Inception-TCN blocks with logarithmically scaled dilations to efficiently capture long-range structure, while the CTA module integrates dilated channel attention with multi-kernel depthwise temporal attention to highlight salient features.
-
-Evaluated on the AVEC2013, AVEC2014, AVEC2017, and AVEC2019 datasets, MSFE-CTA achieves state-of-the-art performance with substantially lower computational cost (only 0.85 M parameters and 1.85 GFLOPs).
-
+Depression impairs functioning across personal and professional domains, and early detection is essential for
+timely intervention. Existing clinical assessments rely on specialists, limiting accessibility and scalability. This
+paper proposes an automated, video-based approach that estimates depression severity directly from full-length
+interviews. Facial markers evolve over micro- to macro- timescales; therefore, focusing solely on short clips
+risks missing long-range cues. This paper introduces a Multi-Timescale Feature Extraction and Channel-Temporal
+Attention network (MSFE–CTA) that learns dependencies across milliseconds, seconds, and minutes from complete
+recordings. The MSFE module employs stacks of Inception-TCN blocks with logarithmically scaled dilations
+to efficiently capture long-range structure, while the CTA module integrates dilated channel attention with multikernel
+depthwise temporal attention to highlight salient features. Window-level predictions are aggregated into
+a video-level score without requiring manual annotations at inference. Evaluated on the AVEC2013, AVEC2014
+datasets, MSFE-CTA achieves MAE/RMSE of 5.75/6.23 and 5.72/6.91, respectively, with only 0.85 M parameters
+and 1.85 GFLOPs. To assess generalizability across benchmarks, the framework was evaluated on AVEC2017
+and AVEC2019 using the official splits, reaching MAE/RMSE of 4.85/5.20 and 5.30/6.44, respectively. Ablation
+studies confirm that multi-timescale extraction and channel-temporal attention contribute to accuracy, and
+that dilated operations outperform fixed-scale or squeeze-and-excitation alternatives. The results demonstrate
+state-of-the-art performance at substantially lower computational cost, enabling practical, full-video depression
+assessment on standard frame-rates. The method is robust to short occlusions through median aggregation and
+may support scalable screening in clinical and community settings.
 ---
 
 ## ⚙️ Installation
