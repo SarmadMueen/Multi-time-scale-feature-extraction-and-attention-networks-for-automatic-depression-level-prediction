@@ -14,7 +14,7 @@ Official source code of the paper: **"Multi-time scale feature extraction and at
 *Department of Electronic and Electrical Engineering, University of Sheffield, Sheffield, S1 3JD, UK*
 
 <br>
-<img src="assets/model_architecture.png" alt="MSFE-CTA Architecture" width="800">
+<img src="/model_page-0001.jpg" alt="MSFE-CTA Architecture" width="800">
 <br>
 
 </div>
